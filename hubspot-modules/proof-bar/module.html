@@ -1,0 +1,158 @@
+{% set logos_array = module.client_logos|split(',') %}
+
+<section class="proof-bar-section">
+  <div class="proof-bar-container">
+    <div class="proof-bar-content">
+      <!-- Client Logos Section -->
+      <div class="logos-section">
+        <p class="trust-text">{{ module.trust_text }}</p>
+        <div class="logos-scroll-container">
+          <div class="logos-scroll-content">
+            {% for logo in logos_array %}
+              <div class="logo-card">
+                <span class="logo-text">{{ logo|trim }}</span>
+              </div>
+            {% endfor %}
+            <!-- Duplicate for seamless loop -->
+            {% for logo in logos_array %}
+              <div class="logo-card">
+                <span class="logo-text">{{ logo|trim }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="gradient-fade gradient-fade-top"></div>
+          <div class="gradient-fade gradient-fade-bottom"></div>
+        </div>
+      </div>
+
+      <!-- Comparison Section -->
+      <div class="comparison-section">
+        <h3 class="comparison-headline">{{ module.comparison_headline }}</h3>
+        <p class="comparison-subtext">{{ module.comparison_subtext }}</p>
+
+        <div class="comparison-table-wrapper">
+          <!-- Column Headers -->
+          <div class="comparison-headers">
+            <div class="header competitor-header">{{ module.competitor_label }}</div>
+            <div class="header company-header">{{ module.your_label }}</div>
+          </div>
+
+          <!-- Comparison Rows -->
+          <div class="comparison-table">
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>Basic appointment setting</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Full-funnel SDR-as-a-Service</strong> solution</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>Limited data sources</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Access to 28+</strong> validated data sources</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>No buyer intent modeling</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Sophisticated propensity modeling</strong> with 1000+ signals</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>Quantity focused KPIs</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Opportunity ROI</strong> focused KPIs</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>Limited visibility into performance</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Real-time Control Plane</strong> dashboard</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>No talent acquisition path</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Temp-to-perm flexibility</strong> for top performers</p>
+              </div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-cell competitor-cell">
+                <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p>Legacy technology</p>
+              </div>
+              <div class="comparison-cell company-cell">
+                <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p><strong>Industry-leading Agentic AI</strong> roadmap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

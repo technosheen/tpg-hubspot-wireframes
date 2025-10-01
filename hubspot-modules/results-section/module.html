@@ -1,0 +1,156 @@
+<section class="results-section" id="results">
+  <div class="results-background-grid"></div>
+
+  <div class="results-container">
+    <div class="results-header">
+      <h2 class="results-headline">{{ module.headline }}</h2>
+      <div class="results-divider"></div>
+    </div>
+
+    <div class="results-grid">
+      <!-- Features List -->
+      <div class="features-list">
+        <div class="feature-card" data-feature="0">
+          <div class="feature-indicator"></div>
+          <div class="feature-content-wrapper">
+            <div class="feature-icon-wrapper" data-color="blue">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3 class="feature-title">Full-funnel execution</h3>
+              <p class="feature-description">From first touch to closed deal, TPG provides on-demand xDR teams and proprietary AI tooling.</p>
+              <div class="feature-metrics">
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Active Campaigns: 47</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Response Rate: 34.2%</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Pipeline Value: $2.8M</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-feature="1">
+          <div class="feature-indicator"></div>
+          <div class="feature-content-wrapper">
+            <div class="feature-icon-wrapper" data-color="green">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3 class="feature-title">Data-driven GTM insights</h3>
+              <p class="feature-description">Our Bloomberg Terminal-like dashboards and AI copilot help identify pricing objections, market headwinds/tailwinds, and conversation trends in real time.</p>
+              <div class="feature-metrics">
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Data Points: 847K</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Patterns Detected: 23</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Accuracy: 94.7%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card" data-feature="2">
+          <div class="feature-indicator"></div>
+          <div class="feature-content-wrapper">
+            <div class="feature-icon-wrapper" data-color="purple">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h3 class="feature-title">Built for PE-backed speed</h3>
+              <p class="feature-description">We partner with financial sponsors and growth leaders to turn portfolio-wide GTM into a competitive advantage.</p>
+              <div class="feature-metrics">
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Time to Market: 14 days</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>ROI Increase: 312%</span>
+                </div>
+                <div class="feature-metric">
+                  <div class="metric-dot"></div>
+                  <span>Portfolio Companies: 15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Placeholder -->
+      <div class="results-visual">
+        <div class="visual-content">
+          <div class="visual-icon-wrapper">
+            <svg class="visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <p class="visual-text">Interactive dashboard experiences are best demonstrated live</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  let activeFeatureIndex = 0;
+  const features = document.querySelectorAll('.feature-card');
+
+  function setActiveFeature(index) {
+    features.forEach((feature, i) => {
+      if (i === index) {
+        feature.classList.add('active');
+      } else {
+        feature.classList.remove('active');
+      }
+    });
+  }
+
+  function cycleFeatures() {
+    setActiveFeature(activeFeatureIndex);
+    activeFeatureIndex = (activeFeatureIndex + 1) % features.length;
+  }
+
+  // Set initial active feature
+  setActiveFeature(0);
+
+  // Auto-cycle every 3 seconds
+  setInterval(cycleFeatures, 3000);
+
+  // Allow manual selection on hover
+  features.forEach((feature, index) => {
+    feature.addEventListener('mouseenter', () => {
+      activeFeatureIndex = index;
+      setActiveFeature(index);
+    });
+  });
+})();
+</script>

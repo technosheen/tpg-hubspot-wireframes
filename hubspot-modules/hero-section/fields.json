@@ -1,0 +1,74 @@
+[
+  {
+    "id": "headline_part1",
+    "name": "headline_part1",
+    "label": "Headline Part 1",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "We Help Companies Build"
+  },
+  {
+    "id": "headline_part2",
+    "name": "headline_part2",
+    "label": "Headline Part 2 (Highlighted)",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Predictable Pipeline"
+  },
+  {
+    "id": "subheadline",
+    "name": "subheadline",
+    "label": "Subheadline",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "Our SDR-as-a-Service model combines AI-enabled SDR teams with 10+ layers of support functions, 28+ data sources and a full GTM tech stack so our clients can focus on selling."
+  },
+  {
+    "id": "cta_primary_text",
+    "name": "cta_primary_text",
+    "label": "Primary CTA Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Talk to TPG"
+  },
+  {
+    "id": "cta_primary_url",
+    "name": "cta_primary_url",
+    "label": "Primary CTA URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": "#"
+  },
+  {
+    "id": "cta_secondary_text",
+    "name": "cta_secondary_text",
+    "label": "Secondary CTA Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "See How It Works"
+  },
+  {
+    "id": "cta_secondary_url",
+    "name": "cta_secondary_url",
+    "label": "Secondary CTA URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": "#"
+  },
+  {
+    "id": "show_animation",
+    "name": "show_animation",
+    "label": "Show Animation",
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": true
+  }
+]

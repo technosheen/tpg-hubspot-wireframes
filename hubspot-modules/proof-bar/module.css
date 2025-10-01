@@ -1,0 +1,251 @@
+.proof-bar-section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.proof-bar-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.proof-bar-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Logos Section */
+.logos-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.trust-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logos-scroll-container {
+  position: relative;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.logos-scroll-content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  animation: scrollUp 25s linear infinite;
+}
+
+@media (max-width: 1280px) {
+  .logos-scroll-content {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logos-scroll-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-scroll-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .logos-scroll-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.logo-card {
+  background: rgba(156, 163, 175, 0.1);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.logo-card:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.gradient-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  pointer-events: none;
+}
+
+.gradient-fade-top {
+  top: 0;
+  background: linear-gradient(to bottom, white, transparent);
+}
+
+.gradient-fade-bottom {
+  bottom: 0;
+  background: linear-gradient(to top, white, transparent);
+}
+
+/* Comparison Section */
+.comparison-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 3rem;
+}
+
+.comparison-headline {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .comparison-headline {
+    font-size: 2.25rem;
+  }
+}
+
+.comparison-subtext {
+  text-align: center;
+  color: #6b7280;
+  margin: 0 0 2rem 0;
+  font-size: 0.875rem;
+}
+
+.comparison-table-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.comparison-headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-bottom: 0.75rem;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.header {
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.competitor-header {
+  color: #64748b;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.company-header {
+  color: hsl(25 95% 53%);
+  border-bottom: 2px solid hsl(25 95% 53%);
+}
+
+.comparison-table {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comparison-row:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-row:nth-child(even) {
+  background-color: rgba(248, 250, 252, 0.5);
+}
+
+.comparison-row:nth-child(odd) {
+  background-color: white;
+}
+
+.comparison-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.competitor-cell {
+  border-right: 1px solid #e2e8f0;
+}
+
+.company-cell {
+  background: rgba(255, 109, 0, 0.02);
+}
+
+.comparison-cell p {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.competitor-cell p {
+  color: #64748b;
+}
+
+.company-cell p {
+  color: #1e293b;
+}
+
+.icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.icon-x {
+  color: #dc2626;
+}
+
+.icon-check {
+  color: hsl(25 95% 53%);
+}

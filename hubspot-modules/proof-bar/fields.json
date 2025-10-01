@@ -1,0 +1,57 @@
+[
+  {
+    "id": "trust_text",
+    "name": "trust_text",
+    "label": "Trust Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Trusted by over 125 companies"
+  },
+  {
+    "id": "client_logos",
+    "name": "client_logos",
+    "label": "Client Logos",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Broadcom, Island, Seagate, HID Global, Hexagon ETQ, Threat Modeler, LRN, AuthID, Carasoft, TD Synnex, Westcon, Invictus Capital, Taleo Capital, Falfurrias Capital Partners",
+    "help_text": "Comma-separated list of client names"
+  },
+  {
+    "id": "comparison_headline",
+    "name": "comparison_headline",
+    "label": "Comparison Section Headline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "See Why Leading Companies Are Making The Switch"
+  },
+  {
+    "id": "comparison_subtext",
+    "name": "comparison_subtext",
+    "label": "Comparison Section Subtext",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Compare what you get with TPG versus traditional outsourced SDR providers"
+  },
+  {
+    "id": "competitor_label",
+    "name": "competitor_label",
+    "label": "Competitor Column Label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Other Outsourced Companies"
+  },
+  {
+    "id": "your_label",
+    "name": "your_label",
+    "label": "Your Company Column Label",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "What You Get With TPG"
+  }
+]

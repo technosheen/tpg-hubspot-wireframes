@@ -1,0 +1,11 @@
+[
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Trusted by Industry Leaders"
+  }
+]

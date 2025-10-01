@@ -1,0 +1,38 @@
+[
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Never Compromise Your Pipeline. Start Today."
+  },
+  {
+    "id": "description",
+    "name": "description",
+    "label": "Description",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "Join 125+ companies that have transformed their go-to-market operations with TPG's proven approach."
+  },
+  {
+    "id": "cta_text",
+    "name": "cta_text",
+    "label": "CTA Button Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Schedule a Meeting"
+  },
+  {
+    "id": "cta_url",
+    "name": "cta_url",
+    "label": "CTA Button URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": "#"
+  }
+]

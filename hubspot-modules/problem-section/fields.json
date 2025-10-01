@@ -1,0 +1,47 @@
+[
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Bloomberg Terminal-Style Reporting"
+  },
+  {
+    "id": "subheading",
+    "name": "subheading",
+    "label": "Subheading",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Visibility You've Never Seen Before"
+  },
+  {
+    "id": "description_1",
+    "name": "description_1",
+    "label": "Description Paragraph 1",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "Real-time dashboards with infinite drill-down capabilities. Every interaction, every touchpoint, every conversion tracked and visualized with institutional-grade precision."
+  },
+  {
+    "id": "description_2",
+    "name": "description_2",
+    "label": "Description Paragraph 2",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "From 30,000-foot pipeline overviews to granular activity tracking—click any metric to expose the underlying data streams, attribution models, and performance indicators."
+  },
+  {
+    "id": "conclusion",
+    "name": "conclusion",
+    "label": "Conclusion Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Complete transparency. Every dollar tracked. Every decision data-driven."
+  }
+]

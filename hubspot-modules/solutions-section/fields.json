@@ -1,0 +1,38 @@
+[
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Our Process"
+  },
+  {
+    "id": "subheadline",
+    "name": "subheadline",
+    "label": "Subheadline",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "A systematic approach to transforming your go-to-market engine into a predictable revenue machine"
+  },
+  {
+    "id": "cta_text",
+    "name": "cta_text",
+    "label": "CTA Button Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "See our full process"
+  },
+  {
+    "id": "cta_url",
+    "name": "cta_url",
+    "label": "CTA Button URL",
+    "required": false,
+    "locked": false,
+    "type": "url",
+    "default": "#"
+  }
+]

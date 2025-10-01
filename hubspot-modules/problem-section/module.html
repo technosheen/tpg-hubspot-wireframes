@@ -1,0 +1,177 @@
+<section class="problem-section">
+  <div class="problem-container">
+    <div class="problem-grid">
+      <div class="problem-content">
+        <h2 class="problem-headline">{{ module.headline }}</h2>
+        <h3 class="problem-subheading">{{ module.subheading }}</h3>
+        <div class="problem-descriptions">
+          <div class="problem-description">{{ module.description_1 }}</div>
+          <div class="problem-description">{{ module.description_2 }}</div>
+          <p class="problem-conclusion">
+            <span class="highlight-text">{{ module.conclusion }}</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="problem-dashboard">
+        <div class="dashboard-card">
+          <!-- Executive Overview -->
+          <div class="dashboard-view" data-view="overview">
+            <div class="dashboard-header">
+              <h3 class="dashboard-title">Executive Overview</h3>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label">Total Pipeline</div>
+                <div class="metric-value">$12.4M</div>
+                <div class="metric-change positive">↑ 12.4%</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Avg Deal Size</div>
+                <div class="metric-value">$284K</div>
+                <div class="metric-change positive">↑ 8.3%</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Win Rate</div>
+                <div class="metric-value">42.8%</div>
+                <div class="metric-change positive">↑ 4.2%</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Avg Sales Cycle</div>
+                <div class="metric-value">38 days</div>
+                <div class="metric-change positive">↓ 8 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lead Disposition -->
+          <div class="dashboard-view" data-view="disposition" style="display: none;">
+            <div class="dashboard-header">
+              <h3 class="dashboard-title">Lead Disposition</h3>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label">Qualified</div>
+                <div class="metric-value">48.2%</div>
+                <div class="metric-count">1,372 leads</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Nurturing</div>
+                <div class="metric-value">32.4%</div>
+                <div class="metric-count">922 leads</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Disqualified</div>
+                <div class="metric-value">14.8%</div>
+                <div class="metric-count">421 leads</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Unresponsive</div>
+                <div class="metric-value">4.6%</div>
+                <div class="metric-count">131 leads</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipeline Health -->
+          <div class="dashboard-view" data-view="pipeline" style="display: none;">
+            <div class="dashboard-header">
+              <h3 class="dashboard-title">Pipeline Health</h3>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label">Response Time</div>
+                <div class="metric-value">< 2 hrs</div>
+                <div class="metric-status excellent">Excellent</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Stage Velocity</div>
+                <div class="metric-value">6.8 days</div>
+                <div class="metric-status excellent">Excellent</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Data Complete</div>
+                <div class="metric-value">96%</div>
+                <div class="metric-status strong">Strong</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Stale Leads</div>
+                <div class="metric-value">8%</div>
+                <div class="metric-status good">Good</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Summary -->
+          <div class="dashboard-view" data-view="performance" style="display: none;">
+            <div class="dashboard-header">
+              <h3 class="dashboard-title">Performance Summary</h3>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label">Monthly Quota</div>
+                <div class="metric-value">$3.2M</div>
+                <div class="metric-count">Target</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Forecast</div>
+                <div class="metric-value">$3.4M</div>
+                <div class="metric-count">Target</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Booked Revenue</div>
+                <div class="metric-value">$2.8M</div>
+                <div class="metric-count">Target</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">At Risk</div>
+                <div class="metric-value">$280K</div>
+                <div class="metric-count">Target</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const views = ['overview', 'disposition', 'pipeline', 'performance'];
+  const delays = [3000, 3500, 3500, 3500];
+  let currentViewIndex = 0;
+
+  function cycleViews() {
+    const allViews = document.querySelectorAll('.dashboard-view');
+
+    // Hide all views
+    allViews.forEach(view => view.style.display = 'none');
+
+    // Show current view
+    const currentView = document.querySelector(`[data-view="${views[currentViewIndex]}"]`);
+    if (currentView) {
+      currentView.style.display = 'block';
+      currentView.style.opacity = '0';
+
+      // Fade in animation
+      setTimeout(() => {
+        currentView.style.opacity = '1';
+      }, 50);
+    }
+
+    // Schedule next view
+    setTimeout(() => {
+      currentViewIndex = (currentViewIndex + 1) % views.length;
+      cycleViews();
+    }, delays[currentViewIndex]);
+  }
+
+  // Start cycling when the page loads
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cycleViews);
+  } else {
+    cycleViews();
+  }
+})();
+</script>

@@ -1,0 +1,36 @@
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-headline">
+            <div class="headline-part1">{{ module.headline_part1 }}</div>
+            <div class="headline-part2">{{ module.headline_part2 }}</div>
+          </h1>
+          <div class="hero-subheadline">
+            {{ module.subheadline }}
+          </div>
+        </div>
+      </div>
+      {% if module.show_animation %}
+      <div class="hero-animation">
+        <div class="process-animation-container">
+          <!-- Simplified animation placeholder -->
+          <div class="animation-circle"></div>
+          <div class="animation-pulse"></div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Centered CTAs -->
+    <div class="hero-ctas">
+      <a href="{{ module.cta_primary_url }}" class="btn btn-primary">
+        {{ module.cta_primary_text }}
+      </a>
+      <a href="{{ module.cta_secondary_url }}" class="btn btn-secondary">
+        {{ module.cta_secondary_text }}
+      </a>
+    </div>
+  </div>
+</section>

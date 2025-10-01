@@ -1,0 +1,13 @@
+{
+  "label": "Results Section",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "A section showing how results are delivered with features and metrics",
+  "host_template_types": ["PAGE", "BLOG_POST"],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "is_available_for_new_content": true
+}

@@ -1,0 +1,51 @@
+.cta-footer-section {
+  padding: 6rem 2rem;
+  background: #111827;
+  color: white;
+}
+
+.cta-footer-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.cta-footer-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cta-headline {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background: white;
+  color: #111827;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
