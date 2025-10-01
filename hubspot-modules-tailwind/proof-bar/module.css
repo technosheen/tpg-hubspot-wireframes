@@ -1,0 +1,14 @@
+/* Proof Bar - Custom Animations Only */
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.logos-scroll-content {
+  animation: scrollUp 25s linear infinite;
+}

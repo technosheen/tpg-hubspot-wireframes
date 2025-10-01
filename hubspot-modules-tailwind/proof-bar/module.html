@@ -1,0 +1,162 @@
+{% set logos_array = module.client_logos|split(',') %}
+
+<section class="py-16 px-8 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center space-y-12">
+      <div class="space-y-8">
+        <p class="text-sm text-gray-600 font-medium">{{ module.trust_text }}</p>
+        <div class="relative h-40 overflow-hidden">
+          <div class="logos-scroll-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 animate-scroll-up">
+            {% for logo in logos_array %}
+              <div class="bg-gray-100 border border-gray-200 rounded-lg p-3 flex items-center justify-center min-h-[60px] hover-elevate opacity-60 hover:opacity-100">
+                <span class="text-xs text-gray-600 font-medium text-center leading-tight">{{ logo|trim }}</span>
+              </div>
+            {% endfor %}
+            <!-- Duplicate for seamless loop -->
+            {% for logo in logos_array %}
+              <div class="bg-gray-100 border border-gray-200 rounded-lg p-3 flex items-center justify-center min-h-[60px] hover-elevate opacity-60 hover:opacity-100">
+                <span class="text-xs text-gray-600 font-medium text-center leading-tight">{{ logo|trim }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Gradient fade effects -->
+          <div class="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 pt-12">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-2">{{ module.comparison_headline }}</h3>
+        <p class="text-center text-gray-600 mb-8 text-sm">{{ module.comparison_subtext }}</p>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Column Headers -->
+          <div class="grid grid-cols-2 gap-0 mb-3 sticky top-0 bg-white z-10">
+            <div class="text-center py-2 px-3 text-xs font-bold text-slate-600 uppercase tracking-wide border-b-2 border-slate-300">
+              {{ module.competitor_label }}
+            </div>
+            <div class="text-center py-2 px-3 text-xs font-bold text-primary uppercase tracking-wide border-b-2 border-primary">
+              {{ module.your_label }}
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="border border-slate-200 rounded-lg overflow-hidden">
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">Basic appointment setting</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Full-funnel SDR-as-a-Service</strong> solution</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">Limited data sources</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Access to 28+</strong> validated data sources</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">No buyer intent modeling</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Sophisticated propensity modeling</strong> with 1000+ signals</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">Quantity focused KPIs</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Opportunity ROI</strong> focused KPIs</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">Limited visibility into performance</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Real-time Control Plane</strong> dashboard</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">No talent acquisition path</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Temp-to-perm flexibility</strong> for top performers</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 odd:bg-slate-50/50 even:bg-white border-t border-slate-200">
+              <div class="flex items-start gap-2 p-3 border-r border-slate-200">
+                <svg class="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <p class="text-sm text-slate-600 leading-tight">Legacy technology</p>
+              </div>
+              <div class="flex items-start gap-2 p-3 bg-primary/[0.02]">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <p class="text-sm text-slate-800 leading-tight"><strong>Industry-leading Agentic AI</strong> roadmap</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

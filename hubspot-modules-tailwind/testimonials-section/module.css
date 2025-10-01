@@ -1,0 +1,46 @@
+/* Testimonials Section - Custom Animations Only */
+
+@keyframes scanMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes starPop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.star-pop {
+  animation: starPop 0.3s ease backwards;
+}
+
+@keyframes scanEffect {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.scan-effect {
+  animation: scanEffect 2s linear infinite;
+}
+
+.testimonial-card .border {
+  transition: all 0.5s ease;
+}
+
+.testimonial-card.active .border {
+  border-color: hsl(25 95% 53% / 0.5);
+}

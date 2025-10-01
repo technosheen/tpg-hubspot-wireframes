@@ -1,0 +1,17 @@
+/* Results Section - Custom Animations Only */
+
+.feature-card {
+  transition: all 0.5s ease;
+}
+
+.feature-indicator {
+  transition: all 0.5s ease;
+}
+
+.feature-icon-wrapper {
+  transition: all 0.5s ease;
+}
+
+.feature-metrics {
+  transition: all 0.3s ease;
+}

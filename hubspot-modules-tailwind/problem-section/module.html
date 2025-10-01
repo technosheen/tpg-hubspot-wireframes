@@ -1,0 +1,192 @@
+<section class="py-24 px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="space-y-6">
+          <h2 class="text-4xl font-medium text-gray-900">{{ module.headline }}</h2>
+          <div class="space-y-4">
+            <h3 class="text-xl font-medium text-gray-900">{{ module.subheading }}</h3>
+            <div class="space-y-3 text-gray-600 leading-relaxed">
+              <div>{{ module.description_1 }}</div>
+              <div>{{ module.description_2 }}</div>
+              <p class="font-medium text-gray-900">
+                <span class="text-primary">{{ module.conclusion }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="p-6 bg-slate-900 border border-slate-700 rounded-xl">
+          <!-- Executive Overview -->
+          <div class="dashboard-view" data-view="overview">
+            <div class="h-8 flex items-center mb-4">
+              <h3 class="text-lg font-semibold text-white">Executive Overview</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Total Pipeline</div>
+                <div class="text-2xl font-bold text-white">$12.4M</div>
+                <div class="text-xs text-primary">↑ 12.4%</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Avg Deal Size</div>
+                <div class="text-2xl font-bold text-white">$284K</div>
+                <div class="text-xs text-primary">↑ 8.3%</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Win Rate</div>
+                <div class="text-2xl font-bold text-white">42.8%</div>
+                <div class="text-xs text-primary">↑ 4.2%</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Avg Sales Cycle</div>
+                <div class="text-2xl font-bold text-white">38 days</div>
+                <div class="text-xs text-primary">↓ 8 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lead Disposition -->
+          <div class="dashboard-view hidden" data-view="disposition">
+            <div class="h-8 flex items-center mb-4">
+              <h3 class="text-lg font-semibold text-white">Lead Disposition</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Qualified</div>
+                <div class="text-2xl font-bold text-white">48.2%</div>
+                <div class="text-xs text-gray-400">1,372 leads</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Nurturing</div>
+                <div class="text-2xl font-bold text-white">32.4%</div>
+                <div class="text-xs text-gray-400">922 leads</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Disqualified</div>
+                <div class="text-2xl font-bold text-white">14.8%</div>
+                <div class="text-xs text-gray-400">421 leads</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Unresponsive</div>
+                <div class="text-2xl font-bold text-white">4.6%</div>
+                <div class="text-xs text-gray-400">131 leads</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pipeline Health -->
+          <div class="dashboard-view hidden" data-view="pipeline">
+            <div class="h-8 flex items-center mb-4">
+              <h3 class="text-lg font-semibold text-white">Pipeline Health</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Response Time</div>
+                <div class="text-2xl font-bold text-white">< 2 hrs</div>
+                <div class="text-xs text-gray-400 flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  Excellent
+                </div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Stage Velocity</div>
+                <div class="text-2xl font-bold text-white">6.8 days</div>
+                <div class="text-xs text-gray-400 flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  Excellent
+                </div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Data Complete</div>
+                <div class="text-2xl font-bold text-white">96%</div>
+                <div class="text-xs text-gray-400 flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  Strong
+                </div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Stale Leads</div>
+                <div class="text-2xl font-bold text-white">8%</div>
+                <div class="text-xs text-gray-400 flex items-center gap-1.5">
+                  <div class="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                  Good
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Performance Summary -->
+          <div class="dashboard-view hidden" data-view="performance">
+            <div class="h-8 flex items-center mb-4">
+              <h3 class="text-lg font-semibold text-white">Performance Summary</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Monthly Quota</div>
+                <div class="text-2xl font-bold text-white">$3.2M</div>
+                <div class="text-xs text-gray-400">Target</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Forecast</div>
+                <div class="text-2xl font-bold text-white">$3.4M</div>
+                <div class="text-xs text-gray-400">Target</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">Booked Revenue</div>
+                <div class="text-2xl font-bold text-white">$2.8M</div>
+                <div class="text-xs text-gray-400">Target</div>
+              </div>
+              <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 hover-elevate transition-all duration-300">
+                <div class="text-xs text-gray-400 mb-1">At Risk</div>
+                <div class="text-2xl font-bold text-white">$280K</div>
+                <div class="text-xs text-gray-400">Target</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const views = ['overview', 'disposition', 'pipeline', 'performance'];
+  const delays = [3000, 3500, 3500, 3500];
+  let currentViewIndex = 0;
+
+  function cycleViews() {
+    const allViews = document.querySelectorAll('.dashboard-view');
+
+    allViews.forEach(view => view.classList.add('hidden'));
+
+    const currentView = document.querySelector(`[data-view="${views[currentViewIndex]}"]`);
+    if (currentView) {
+      currentView.classList.remove('hidden');
+      currentView.style.opacity = '0';
+
+      setTimeout(() => {
+        currentView.style.opacity = '1';
+      }, 50);
+    }
+
+    setTimeout(() => {
+      currentViewIndex = (currentViewIndex + 1) % views.length;
+      cycleViews();
+    }, delays[currentViewIndex]);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cycleViews);
+  } else {
+    cycleViews();
+  }
+})();
+</script>
